@@ -1,0 +1,21 @@
+FUNCTION unique(arr)
+    CREATE empty dictionary count
+
+    FOR each num in arr
+        INCREMENT count[num] by 1 (initialize if not present)
+
+    CREATE empty lists uniqueValues and repeatedValues
+
+    FOR each num in count
+        IF count[num] == 1 THEN
+            ADD num to uniqueValues
+        ELSE
+            ADD num to repeatedValues
+
+    RETURN { uniqueValues, repeatedValues }
+
+SET numbers = [10, 10, 20, 30]
+SET result = unique(numbers)
+
+PRINT "Unique Values:", result.uniqueValues
+PRINT "Repeated Values:", result.repeatedValues
